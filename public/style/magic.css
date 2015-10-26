@@ -1,5 +1,11 @@
+body{
+  color: #B6B6B4;
+  text-align: center;
+}
+
 img {
   padding: 30px;
+  border-radius: 50%;
 }
 
 .boingInUp {
@@ -48,9 +54,9 @@ img {
  }
 
 .rotate {
-    position :relative;
-    -webkit-animation: infinite-spinning 5s;
-    animation: infinite-spinning 5s;
+  position :relative;
+  -webkit-animation: infinite-spinning 5s;
+  animation: infinite-spinning 5s;
  }
 
 @-webkit-keyframes infinite-spinning {
@@ -60,4 +66,29 @@ img {
   to {
     transform: rotate(360deg);
   }
+}
+
+.heart {
+  position :relative;
+  -webkit-animation: heart 10s;
+  animation: heart 10s;
+}
+
+@-webkit-keyframes heart {
+  0% { -webkit-transform: scale(1); }
+  50% { -webkit-transform: scale(1.6); }
+  100% { -webkit-transform: scale(1); }
+}
+
+.bounce {
+  position :relative;
+  -webkit-animation: bounce 8s;
+  animation: bounce 8s;
+}
+
+@-webkit-keyframes bounce {
+    0%, 20%, 50%, 80% {-webkit-transform: translateY(0);}
+    40% {-webkit-transform: translateY(-100px);}
+    60% {-webkit-transform: translateY(-80px);}
+    100% {-webkit-transform: translateY(-60px);}
 }
