@@ -1,7 +1,29 @@
-var feed = new Instafeed({
-  get: "tagged",
-  limit: 18,
-  tagName: "nature",
-  clientId: "1996daee3be64d48bcd02377fa5426be"
-});
-feed.run();
+$(function(){
+
+  $.ajax({
+    url: '/image',
+    type: "GET",
+    contentType: 'application/json; charset=utf-8',
+    success: function(data){
+      console.log(data)
+      var start = "";
+      for(var i = 0; i < 15; i++){
+        start += "<a href='" + data[i].link + "'><img height='200' width='200' src='" + data[i].images.standard_resolution.url + "' class='boingInUp' /></a>";
+      }
+      $('#instafeed').html(start);
+    },
+    error: function(){
+      console.log('there is an error!');
+    },
+    timeout: 120000
+  });
+
+  $('#magic').on('click', function(){
+    $('#instafeed img').removeClass($('#instafeed img').attr('class'));
+    $('#instafeed img').toggleClass("shake")
+  });
+  $('#spin').on('click', function(){
+    $('#instafeed img').removeClass($('#instafeed img').attr('class'));
+    $('#instafeed img').toggleClass("rotate")
+  });
+})

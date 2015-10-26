@@ -2,27 +2,20 @@
 <html>
   <head>
     <title>Practicing CSS3</title>
-    <link type="text/css" href="./bower_components/csshake/dist/csshake.min.css">
     <link rel="stylesheet" type="text/css" href="./style/magic.css">
   </head>
   <body>
-
     <div id="wrapper">
       <h1>Instagram Feed</h1>
       <form>
-        <button onclick="myFunction()" type="button">Magic!</button>
+        <button id="magic" type="button">Magic!</button>
+        <button id="spin" type="button">Spin!</button>
       </form>
       <br />
       <div id="instafeed"></div>
     </div>
 
     <script src="./bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="./instafeed.js"></script>
     <script src="./script.js"></script>
-    <script>
-      function myFunction(){
-        $('img').addClass('shake-chunk');
-      }
-    </script>
   </body>
 </html>

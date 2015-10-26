@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/sinwailam193/instaCSS3#readme",
   "dependencies": {
-    "express": "^4.13.3"
+    "express": "^4.13.3",
+    "instagram-node": "^0.5.8"
   }
 }
