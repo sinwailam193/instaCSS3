@@ -11,7 +11,7 @@ instagram.use({
   client_secret: '7d9e370031c04809a5415e2d1ce392fe'
 })
 
-app.get('/image', function(req, res){
+app.get('/images', function(req, res){
   instagram.media_popular(function(err, medias, remaining, limit){
     res.json(medias);
   })

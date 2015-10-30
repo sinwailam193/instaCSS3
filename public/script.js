@@ -1,13 +1,13 @@
 $(function(){
 
   $.ajax({
-    url: '/image',
+    url: '/images',
     type: "GET",
     contentType: 'application/json; charset=utf-8',
     success: function(data){
       var start = "";
       for(var i = 0; i < 15; i++){
-        start += "<a href='" + data[i].link + "'><img height='200' width='200' src='" + data[i].images.standard_resolution.url + "' class='boingInUp' /></a>";
+        start += "<a href='" + data[i].link + "'><img height='150' width='150' src='" + data[i].images.standard_resolution.url + "' class='boingInUp' /></a>";
       }
       $('#instafeed').html(start);
     },
