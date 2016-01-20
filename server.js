@@ -7,8 +7,8 @@ var instagram = require('instagram-node').instagram();
 app.use(express.static(__dirname + "/public"));
 
 instagram.use({
-  client_id: 'd0398689c1344237a30acdbccc69adc3',
-  client_secret: '7d9e370031c04809a5415e2d1ce392fe'
+  client_id: "",
+  client_secret: ""
 })
 
 app.get('/images', function(req, res){
